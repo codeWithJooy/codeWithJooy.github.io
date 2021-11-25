@@ -1,0 +1,249 @@
+@font-face {
+    font-family: metropolis_regular;
+    src: url(../Fonts/Metropolis/Metropolis-Regular.otf)
+  }
+  @font-face {
+    font-family: metropolis_medium;
+    src: url(../Fonts/Metropolis/Metropolis-Medium.otf)
+  }
+  @font-face {
+    font-family: metropolis_bold;
+    src: url(../Fonts/Metropolis/Metropolis-Bold.otf)
+  }
+
+  *{
+    padding: 0%;
+    margin: 0%;
+    
+    }
+body{
+        font-family: metropolis_regular;
+        font-size: 12px;
+        font-weight: 200;
+        background-color: white;
+        border: none;
+        color: #03011e;
+       
+    }
+.page_main{
+    width:100%;
+    padding:0px 20px;
+}    
+.welcome_section{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding:10px 10px;
+}
+.welcome_text{
+    width:50%;
+    padding:20px 0px;
+}
+.welcome_text p.greet{
+  font-size: 13px;
+  font-weight: 500;
+  width: 100%;
+}
+.welcome_text p.name{
+    font-size: 17px;
+    font-weight: bold;
+    position: relative;
+    top:-10px;
+    
+}
+.welcome_image{
+    width:50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+/*==================================================
+                  Classes Section Starts Here
+===================================================*/
+.class_section{
+    width:100%;
+    padding:15px 10px 30px;
+    background-color: #03011e;
+    border-radius: 20px;
+}
+.class_section_header{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.class_header{
+   width:60%;
+   margin-left: 20%;
+   text-align: center;
+}
+.class_header p{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: metropolis_medium;
+    color: #fff;
+}
+.class_container{
+    width:100%;
+    padding:0px 20px;
+}
+.class_unit{
+    padding:10px 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.batch_name{
+    width:100%;
+}
+.batch_name p{
+    font-size: 18px;
+    font-weight: bold;
+}
+.timming{
+    width:100%;
+}
+.timming p{
+    font-size: 15px;
+    font-weight: 400;
+    color:teal;
+}
+/*==================================================
+                  Classes Section Ends Here
+===================================================*/
+
+/*==================================================
+                  Topic Section Starts Here
+===================================================*/
+.topic_section{
+    width:100%;
+    padding:10px 0px;
+}
+.topic_section_header{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.topic_header{
+   width:60%;
+}
+.topic_header p{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: metropolis_medium;
+}
+.topic_section_header span{
+    width: 15%;
+    margin-left: 25%;
+    float:right;
+    color:#9dc4ed;
+    font-weight: bold;
+    font-family: metropolis_medium;
+}
+.topic_card_section{
+    width:100%;
+    padding:0px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.topic_card_unit{
+    width:50%;
+    padding:5px 15px;
+}
+.topic_card_unit .card{
+    width:100%;
+    border-radius: 10px;
+    height:150px;
+    border: none;
+}
+.card_header{
+    font-family: metropolis_medium;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    top:20px;
+    left:20px;
+}
+.card_courses{
+    font-size: 13px;
+    position: relative;
+    top:20px;
+    left:20px;
+}
+.card_image_section{
+    position: relative;
+    top:20px;
+    display: flex;
+    justify-content: center;
+}
+.card_image_section img{
+    width:70%;
+    height: 70%;
+}
+.card_bg_1{
+    background: #ee9ca7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}  
+.card_bg_2{
+    background: #1c92d2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.card_bg_3{
+    background: #636363;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #a2ab58, #636363);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #a2ab58, #636363); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.card_bg_4{
+    background: #00C9FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+ /*==================================================
+                  Topic Section Ends Here
+===================================================*/
+/*==================================================
+                  Lecture Section Starts Here
+===================================================*/
+.lecture_section{
+    width:100%;
+    padding:10px 0px;
+}
+.lecture_card_section{
+    width:100%;
+    padding:0px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.lecture_card{
+    width:100%;
+    padding:10px 20px;
+}
+.lecture_card .card{
+    width:100%;
+    height:200px;
+    position: relative;
+}
+.lecture_card img{
+    width:100%;
+    height:100%;
+}
+.lecture_card img.lecture_play{
+    height:32px;
+    width:32px;
+    position: absolute;
+    top:45%;
+    left:45%;
+}
+.lecture_card iframe{
+    width:100%;
+    height:200px;
+}
+/*==================================================
+                  Lecture Section Ends Here
+===================================================*/
