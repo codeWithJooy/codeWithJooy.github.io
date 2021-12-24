@@ -246,9 +246,16 @@ body{
   animation-name: cf3FadeInOut;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-duration: 4s;
+  animation-duration: 6s;
   animation-direction: alternate;
   }
+  .image_header_section img.middle {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    }
  
   span#word{
   animation: 
