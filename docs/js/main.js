@@ -68,44 +68,55 @@ $("#contact_button").on("click",function(){
 });
 
 $(document).ready(function() {
-        
-    var featureTop = $('#features').offset().top+100;
-    var aboutTop = $('#about').offset().top+80;
-    var serviceTop = $('#services').offset().top+80;
+
+	// var xhttp=new XMLHttpRequest();
+  //   xhttp.onreadystatechange=function(){
+  //      if(this.readyState == 4 && this.status == 200 ){
+          
+           
+           
+  //        } 
+  //   }
+  //   xhttp.open("GET","update_visitors",false);
+  //   xhttp.send(); 
+    
+    
+    var serviceTop = $('#services').offset().top+100;
+    var featureTop = $('#features').offset().top+80;
     var newsTop = $('#news').offset().top+80;
+    var aboutTop = $('#about').offset().top+80;
     var contactTop = $('#contact').offset().top+80;
     
     var height=window.innerHeight;
     
-    if (featureTop <  height) {
-        $(".feature_unit").addClass("ani");
+    if (serviceTop <  height) {
+        $(".service_unit").addClass("ani");
       }
-      if (aboutTop <  height) {
-        $(".about_unit").addClass("ani");
+      if (newsTop <  height) {
+        $(".news_unit").addClass("ani");
       }
     $(window).scroll(function() {  
       var scrollPos = $(document).scrollTop();  
       var windowTop = $(window).scrollTop();
-      if (featureTop  < windowTop + height) {
+      if (serviceTop <  windowTop + height) {
+        $(".service_unit").addClass("ani");
+        $(".link_class").css("color","rgb(51,51,51)");
+        $("#service_link").css("color","#03c4eb");
+      }
+      if (featureTop+300  < windowTop + height) {
         $(".feature_unit").addClass("ani");
         $(".link_class").css("color","rgb(51,51,51)");
         $("#feature_link").css("color","#03c4eb");
+      }
+      if (newsTop+300 <  windowTop + height) {
+        $(".blog_unit").addClass("ani");
+        $(".link_class").css("color","rgb(51,51,51)");
+        $("#news_link").css("color","#03c4eb");
       }
       if (aboutTop + 300 < windowTop + height) {
         $(".about_unit").addClass("ani");
         $(".link_class").css("color","rgb(51,51,51)");
         $("#about_link").css("color","#03c4eb");
-      }
-      if (serviceTop +300<  windowTop + height) {
-        $(".service_unit").addClass("ani");
-        $(".link_class").css("color","rgb(51,51,51)");
-        $("#service_link").css("color","#03c4eb");
-      }
-
-      if (newsTop+300 <  windowTop + height) {
-        $(".blog_unit").addClass("ani");
-        $(".link_class").css("color","rgb(51,51,51)");
-        $("#news_link").css("color","#03c4eb");
       }
       if (contactTop+300 <  windowTop + height) {
         $(".contact_unit").addClass("ani");
@@ -129,3 +140,41 @@ $(document).ready(function() {
       
     }, 4000);
   });
+  
+  $("#submit").on("click",function(){
+	 var first=$("#first").val();
+	 var last=$("#last").val();
+	 var email=$("#email").val();
+	 var phone=$("#phone").val();
+	 var msg=$("#msg").val();
+	 
+	 var url="get_enquiry";
+	 var param="first="+first+
+	           "&last="+last+
+	           "&email="+email+
+	           "&phone="+phone+
+	           "&msg="+msg;
+	       
+
+	       var xhttp=new XMLHttpRequest();
+	       xhttp.onreadystatechange=function(){
+	          if(this.readyState == 4 && this.status == 200 ){
+	             
+	                  alert("Enquiry Submitted");
+	                  window.open("index.jsp","_self");
+	             
+	              
+	            } 
+	       }
+	       xhttp.open("GET", url+"?"+param,false);
+	       xhttp.send(); 
+  });
+
+
+    $('#sendmail').click(function (event) {
+      var email = 'business.myag@gmail.com';
+      var subject = 'Test';
+      var emailBody = 'Hi Sample,';
+      
+      document.location = "mailto:"+email+"?subject="+subject+"&body="+emailBody;
+    });
