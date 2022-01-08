@@ -128,7 +128,7 @@ $(document).ready(function() {
     xhttp.send();
     
     
-    var url="news_fetch_string";
+     var url="http://myaccountsguru.herokuapp.com/news_fetch_string";
 	 var xhttp_1=new XMLHttpRequest();
    xhttp_1.onreadystatechange=function(){
       if(this.readyState == 4 && this.status == 200 ){
