@@ -202,7 +202,7 @@ $(document).ready(function() {
 	          if(this.readyState == 4 && this.status == 200 ){
 	             
 	                  alert("Enquiry Submitted");
-	                  window.open("index.jsp","_self");
+	                  window.open("index.html","_self");
 	             
 	              
 	            } 
