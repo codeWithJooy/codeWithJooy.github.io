@@ -377,13 +377,14 @@
             
                         <!-- Blog Section Starts Here-->
                         <div class="blog_section" id="news">
-                            <div class="blog_container">
+                            <div class="blog_container" id="blog_container">
                                 <div class="features_title">
                                    
                                     <span class="answer">Latest News and Updates</span>
                                 </div>
-            
+                                 
                                 <!-- Blog Unit Starts Here-->
+                                <!-- 
                                 <div class="blog_unit blog_margin">
                                     <div class="blog_unit_container">
                                        <div class="blog_image_section">
@@ -409,58 +410,9 @@
                                     </div>
                                 </div>
                                 <!-- Blog Unit Ends Here-->
-                                <!-- Blog Unit Starts Here-->
-                                <div class="blog_unit">
-                                    <div class="blog_unit_container">
-                                       <div class="blog_image_section">
-                                         <img src="docs/img/adventure.jpg">
-                                       </div>
-                                       <div class="blog_text_section">
-                                           <div class="blog_text_link">
-                                             <p>
-                                                APPS <span>/</span> ONE PAGE <span>/</span> RESPONSIVE
-                                             </p>
-                                           </div>
-                                           <div class="blog_header">
-                                               <span>
-                                                Markup: HTML Tags and Formatting
-                                               </span>
-                                           </div>
-                                           <div class="blog_span">
-                                               <span>
-                                                Headings Header one Header two Header three Header four Header five Header six Blockquotes Single line blockquote: Stay hungry. Stay foolish. Multi line blockquote with a cite reference: People think …
-                                               </span>
-                                           </div>
-                                       </div>
-                                    </div>
-                                </div>
-                                <!-- Blog Unit Ends Here-->
-                                <!-- Blog Unit Starts Here-->
-                                <div class="blog_unit">
-                                    <div class="blog_unit_container">
-                                       <div class="blog_image_section">
-                                         <img src="docs/img/adventure.jpg">
-                                       </div>
-                                       <div class="blog_text_section">
-                                           <div class="blog_text_link">
-                                             <p>
-                                                APPS <span>/</span> ONE PAGE <span>/</span> RESPONSIVE
-                                             </p>
-                                           </div>
-                                           <div class="blog_header">
-                                               <span>
-                                                Markup: HTML Tags and Formatting
-                                               </span>
-                                           </div>
-                                           <div class="blog_span">
-                                               <span>
-                                                Headings Header one Header two Header three Header four Header five Header six Blockquotes Single line blockquote: Stay hungry. Stay foolish. Multi line blockquote with a cite reference: People think …
-                                               </span>
-                                           </div>
-                                       </div>
-                                    </div>
-                                </div>
-                                <!-- Blog Unit Ends Here-->
+                          
+                          
+                              
                             </div>
                         </div>
                         <!-- Blog Section Ends Here-->
@@ -537,18 +489,18 @@
                             <div class="contact_input_half">
                                  <span>Name <i class="fa fa-star"></i></span>
                                  <div class="half_input">
-                                     <input type="text">
+                                     <input type="text" id="first">
                                      <span>First</span>
                                  </div>
                                  <div class="half_input">
-                                    <input type="text">
+                                    <input type="text" id="last">
                                     <span>Last</span>
                                 </div>
                             </div>
                             <div class="contact_input_half">
                                 <span>Email <i class="fa fa-star"></i></span>
-                                <div class="full_input">
-                                    <input type="text">
+                                <div class="full_input" >
+                                    <input type="text" id="email">
                                     
                                 </div>
                            </div>
@@ -556,7 +508,7 @@
                            <div class="contact_input_half">
                             <span>Phone Number</span>
                             <div class="full_input">
-                                <input type="text">
+                                <input type="text" id="phone">
                                 
                             </div>
                        </div>
@@ -564,12 +516,12 @@
                            <div class="contact_input_half">
                              <span>Comment or Message <i class="fa fa-star"></i></span>
                              <div class="full_input">
-                                <textarea placeholder="Please type here....."></textarea>
+                                <textarea placeholder="Please type here....." id="msg"></textarea>
                              </div>
                            </div>
 
                            <div class="contact_input_half">
-                            <button class="btn">Submit</button>
+                            <button class="btn" id="submit">Submit</button>
                           </div>
 
                         </div>
@@ -668,6 +620,6 @@ Since businesses are inherently different, we tailor our services to meet client
     <!-- JavaScript For Slick Carousel-->
     <script type="text/javaScript" src="docs/js/slick.min.js" ></script>
     
-     <script type="text/javascript" src="docs/js/main.js?v=1"></script>
+     <script type="text/javascript" src="docs/js/main.js?v=31"></script>
   </body>
 </html>
