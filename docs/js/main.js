@@ -69,16 +69,6 @@ $("#contact_button").on("click",function(){
 
 $(document).ready(function() {
 
-	// var xhttp=new XMLHttpRequest();
-  //   xhttp.onreadystatechange=function(){
-  //      if(this.readyState == 4 && this.status == 200 ){
-          
-           
-           
-  //        } 
-  //   }
-  //   xhttp.open("GET","update_visitors",false);
-  //   xhttp.send(); 
     
     
     var serviceTop = $('#services').offset().top+100;
@@ -124,6 +114,35 @@ $(document).ready(function() {
         $("#contact_link").css("color","#03c4eb");
       }
     });
+    
+    var url="http://myaccountsguru.herokuapp.com/update_visitors";
+	 var xhttp=new XMLHttpRequest();
+    xhttp.onreadystatechange=function(){
+       if(this.readyState == 4 && this.status == 200 ){
+         
+          
+          
+         } 
+    }
+    xhttp.open("GET",url,true);
+    xhttp.send();
+    
+    
+    var url="news_fetch_string";
+	 var xhttp_1=new XMLHttpRequest();
+   xhttp_1.onreadystatechange=function(){
+      if(this.readyState == 4 && this.status == 200 ){
+        
+          document.getElementById('blog_container').innerHTML+=this.responseText;
+          
+         
+        } 
+   }
+   xhttp_1.open("GET",url,true);
+   xhttp_1.send();
+    
+    
+    
   });
 
   $(function () {
@@ -141,6 +160,12 @@ $(document).ready(function() {
     }, 4000);
   });
   
+  function isEmail(email) {
+	  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	  return regex.test(email);
+}
+
+  
   $("#submit").on("click",function(){
 	 var first=$("#first").val();
 	 var last=$("#last").val();
@@ -148,7 +173,23 @@ $(document).ready(function() {
 	 var phone=$("#phone").val();
 	 var msg=$("#msg").val();
 	 
-	 var url="get_enquiry";
+	 if(first==""){
+		 alert("Please Enter Your First Name");
+	 }
+	 else if(last==""){
+		 alert("Please Enter Your Last Name");
+	 }
+	 else if(email==""){
+		 alert("Email Can't Be Empty");
+	 }
+	 else if(!isEmail(email)){
+		 alert("Please add a valid Email ");
+	 }
+	 else if(msg==""){
+		 alert("Comment or Message can't be empty");
+	 }
+	 else{
+	 var url="https://myaccountsguru.herokuapp.com/get_enquiry";
 	 var param="first="+first+
 	           "&last="+last+
 	           "&email="+email+
@@ -166,8 +207,9 @@ $(document).ready(function() {
 	              
 	            } 
 	       }
-	       xhttp.open("GET", url+"?"+param,false);
+	       xhttp.open("GET", url+"?"+param,true);
 	       xhttp.send(); 
+	 }
   });
 
 
